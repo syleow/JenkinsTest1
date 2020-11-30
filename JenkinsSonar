@@ -11,7 +11,7 @@ pipeline {
 		stage('Code Quality Check via SonarQube') {
 			steps {
 				script {
-				def scannerHome = tool 'Sonarqube';
+				def scannerHome = tool 'SonarQube';
 					withSonarQubeEnv() {
 					sh "${tool("SonarQube")}/bin/sonar-scanner \
 					-Dsonar.projectKey=OWASP \
